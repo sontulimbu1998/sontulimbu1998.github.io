@@ -61,3 +61,158 @@
 </body>
 </h
   tml>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZyphAbyssX | Free Fire 3D</title>
+
+<style>
+:root{
+  --neon:#ff0055;
+  --gold:#ffcc00;
+  --bg:#05050b;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:radial-gradient(circle at top,#1a1a2e,var(--bg));
+  color:white;
+  font-family:Segoe UI, sans-serif;
+  overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  perspective:1200px;
+}
+
+.hero-card{
+  width:360px;
+  padding:40px;
+  background:linear-gradient(145deg,#111122,#06060c);
+  border-radius:25px;
+  border:2px solid var(--neon);
+  transform-style:preserve-3d;
+  transition:.15s;
+  box-shadow:0 40px 80px rgba(0,0,0,.8);
+}
+
+.hero-card h1{
+  color:var(--neon);
+  font-size:3rem;
+  text-shadow:0 0 25px var(--neon);
+  transform:translateZ(50px);
+}
+
+.hero-card p{
+  letter-spacing:2px;
+  color:#ccc;
+  transform:translateZ(40px);
+}
+
+.btn{
+  margin-top:25px;
+  display:inline-block;
+  padding:12px 30px;
+  background:var(--neon);
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:30px;
+  box-shadow:0 0 20px var(--neon);
+  transform:translateZ(60px);
+}
+
+/* BUNDLES */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+h2{
+  color:var(--gold);
+  text-shadow:0 0 15px var(--gold);
+  margin-bottom:40px;
+}
+
+.bundle-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.bundle{
+  background:rgba(255,255,255,0.06);
+  border-radius:20px;
+  padding:25px;
+  border:1px solid rgba(255,255,255,.15);
+  transition:.3s;
+}
+
+.bundle:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 30px var(--gold);
+}
+
+footer{
+  padding:20px;
+  text-align:center;
+  background:#030308;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-card" id="card">
+    <h1>ZYPHABYSSX</h1>
+    <p>FREE FIRE • PRO GAMER</p>
+    <a class="btn" href="https://www.youtube.com/@ZyphAbyssX" target="_blank">
+      ▶ SUBSCRIBE
+    </a>
+  </div>
+</div>
+
+<!-- BUNDLES -->
+<section>
+  <h2>🔥 Legendary Bundles</h2>
+  <div class="bundle-grid">
+    <div class="bundle">Golden Sakura Bundle</div>
+    <div class="bundle">Hip Hop Bundle</div>
+    <div class="bundle">Golden Season 1</div>
+    <div class="bundle">Golden Season 2</div>
+  </div>
+</section>
+
+<footer>
+© 2026 ZyphAbyssX • Free Fire 3D Gaming
+</footer>
+
+<script>
+const card=document.getElementById("card");
+document.addEventListener("mousemove",e=>{
+  let x=(window.innerWidth/2-e.pageX)/25;
+  let y=(window.innerHeight/2-e.pageY)/25;
+  card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
+});
+document.addEventListener("mouseleave",()=>{
+  card.style.transform="rotateX(0) rotateY(0)";
+});
+</script>
+
+</body>
+</html>
