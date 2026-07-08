@@ -1,218 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZyphAbyssX | Pro Gaming HQ</title>
-    <style>
-        :root { --neon: #ff0055; --dark: #0a0a0f; --glass: rgba(255, 255, 255, 0.08); }
-        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; }
-        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-size: 4rem; text-transform: uppercase; color: var(--neon); text-shadow: 0 0 30px var(--neon); }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.1); padding: 25px; border-radius: 20px; backdrop-filter: blur(10px); transition: 0.4s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--neon); box-shadow: 0 10px 30px rgba(255,0,85,0.3); }
-        .logo { font-size: 3rem; margin-bottom: 10px; }
-        .btn { padding: 12px 25px; background: var(--neon); color: #fff; border-radius: 30px; text-decoration: none; font-weight: bold; }
-    </style>
-</head>
-<body>
-
-    <div class="hero">
-        <h1 class="glow">ZYPHABYSSX</h1>
-        <p>BATTLE ROYALE MASTER | FREE FIRE PRO PLAYER</p>
-        <br>
-        <a href="https://youtube.com/@zyphabyssx" target="_blank" class="btn">SUBSCRIBE FOR PRO TIPS</a>
-    </div>
-
-    <div class="container">
-        <h2>🎮 MY GAMING ARENA</h2>
-        <div class="grid">
-                        <!-- Message Section -->
-            <div class="card">
-                <div class="logo">✉️</div>
-                <h3>Message Me (Collab/Chat)</h3>
-                <p>Mere sath game khelne ya collab karne ke liye mujhe direct message karein!</p>
-                <br>
-                <a href="mailto:sontulimbu1998.com" class="btn" style="background: #00f2fe; color: #000;">SEND EMAIL</a>
-            </div>
-          
-            <div class="card">
-                <div class="logo">🔥</div>
-                <h3>Free Fire Pro Gameplay</h3>
-                <p>Insane headshots, tactical rush gameplay, and elite battle royale strategies.</p>
-            </div>
-
-            <div class="card">
-                <div class="logo">🎯</div>
-                <h3>Battle Royale Updates</h3>
-                <p>Daily updates on events, weapon skins, and tips to rank up to Grandmaster.</p>
-            </div>
-
-            <div class="card">
-                <div class="logo">⚡</div>
-                <h3>Multi-Gaming</h3>
-                <p>Exploring new titles and showcasing high-octane action across various games.</p>
-            </div>
-
-        </div>
-    </div>
-</body>
-</h
-  tml>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZyphAbyssX | Free Fire 3D</title>
-
+<title>ZyphAbyssX | The Ultimate E-Sports HQ</title>
 <style>
-:root{
-  --neon:#ff0055;
-  --gold:#ffcc00;
-  --bg:#05050b;
-}
+  :root {
+    --neon: #ff0055;
+    --cyan: #00f2fe;
+    --gold: #ffcc00;
+    --bg: #05050b;
+    --glass: rgba(255, 255, 255, 0.06);
+  }
 
-body{
-  margin:0;
-  min-height:100vh;
-  background:radial-gradient(circle at top,#1a1a2e,var(--bg));
-  color:white;
-  font-family:Segoe UI, sans-serif;
-  overflow-x:hidden;
-}
+  body {
+    margin: 0;
+    background: radial-gradient(circle at top, #1a1a2e, var(--bg));
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  perspective:1200px;
-}
+  /* --- 3D HERO SECTION --- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    perspective: 1200px;
+    padding: 40px 20px;
+  }
 
-.hero-card{
-  width:360px;
-  padding:40px;
-  background:linear-gradient(145deg,#111122,#06060c);
-  border-radius:25px;
-  border:2px solid var(--neon);
-  transform-style:preserve-3d;
-  transition:.15s;
-  box-shadow:0 40px 80px rgba(0,0,0,.8);
-}
+  .hero-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 30px;
+    background: linear-gradient(145deg, #111122, #06060c);
+    border-radius: 25px;
+    border: 2px solid var(--neon);
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+  }
 
-.hero-card h1{
-  color:var(--neon);
-  font-size:3rem;
-  text-shadow:0 0 25px var(--neon);
-  transform:translateZ(50px);
-}
+  .hero-card h1 {
+    margin: 0;
+    color: var(--neon);
+    font-size: 3.5rem;
+    text-shadow: 0 0 25px var(--neon);
+    transform: translateZ(50px);
+    text-transform: uppercase;
+  }
 
-.hero-card p{
-  letter-spacing:2px;
-  color:#ccc;
-  transform:translateZ(40px);
-}
+  .hero-card p {
+    letter-spacing: 2px;
+    color: #ccc;
+    transform: translateZ(40px);
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 
-.btn{
-  margin-top:25px;
-  display:inline-block;
-  padding:12px 30px;
-  background:var(--neon);
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:30px;
-  box-shadow:0 0 20px var(--neon);
-  transform:translateZ(60px);
-}
+  /* --- SOCIAL BUTTONS IN HERO --- */
+  .social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 35px;
+    transform: translateZ(60px);
+  }
 
-/* BUNDLES */
-section{
-  padding:80px 20px;
-  text-align:center;
-}
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: var(--glass);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+    font-size: 0.9rem;
+  }
 
-h2{
-  color:var(--gold);
-  text-shadow:0 0 15px var(--gold);
-  margin-bottom:40px;
-}
+  .social-btn:hover { transform: translateY(-3px); }
+  .btn-yt:hover { background: #ff0000; box-shadow: 0 0 20px #ff0000; border-color: #ff0000; }
+  .btn-fb:hover { background: #1877f2; box-shadow: 0 0 20px #1877f2; border-color: #1877f2; }
+  .btn-wa:hover { background: #25d366; box-shadow: 0 0 20px #25d366; border-color: #25d366; }
+  .btn-mail:hover { background: var(--cyan); color: #000; box-shadow: 0 0 20px var(--cyan); border-color: var(--cyan); }
 
-.bundle-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  max-width:1000px;
-  margin:auto;
-}
+  /* --- GENERAL SECTIONS --- */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+  }
 
-.bundle{
-  background:rgba(255,255,255,0.06);
-  border-radius:20px;
-  padding:25px;
-  border:1px solid rgba(255,255,255,.15);
-  transition:.3s;
-}
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
 
-.bundle:hover{
-  transform:translateY(-10px) scale(1.05);
-  box-shadow:0 0 30px var(--gold);
-}
+  h2.neon-text { color: var(--neon); text-shadow: 0 0 15px var(--neon); }
+  h2.gold-text { color: var(--gold); text-shadow: 0 0 15px var(--gold); }
+  h2.cyan-text { color: var(--cyan); text-shadow: 0 0 15px var(--cyan); }
 
-footer{
-  padding:20px;
-  text-align:center;
-  background:#030308;
-  color:#555;
-}
+  /* --- GAMING ARENA GRID --- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .arena-card {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 30px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+  }
+
+  .arena-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon);
+    box-shadow: 0 10px 30px rgba(255,0,85,0.3);
+  }
+
+  .arena-card .logo { font-size: 3rem; margin-bottom: 15px; }
+  .arena-card h3 { color: #fff; margin-bottom: 10px; }
+  .arena-card p { color: #bbb; font-size: 0.9rem; line-height: 1.5; }
+
+  /* --- FEATURED IMAGE CARD --- */
+  .featured-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background: var(--glass);
+    border-radius: 20px;
+    border: 1px solid rgba(255,204,0,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(255, 204, 0, 0.1);
+    transition: 0.4s;
+  }
+
+  .featured-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--gold);
+    box-shadow: 0 15px 40px rgba(255, 204, 0, 0.4);
+  }
+
+  .featured-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+
+  .featured-card h3 {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  /* --- LEGENDARY BUNDLES GRID --- */
+  .bundle-card {
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.15);
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #eee;
+  }
+
+  .bundle-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+    color: var(--gold);
+  }
+
+  /* --- FOOTER --- */
+  footer {
+    padding: 25px;
+    text-align: center;
+    background: #030308;
+    color: #777;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+    margin-top: 40px;
+  }
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-card" id="card">
-    <h1>ZYPHABYSSX</h1>
-    <p>FREE FIRE • PRO GAMER</p>
-    <a class="btn" href="https://www.youtube.com/@ZyphAbyssX" target="_blank">
-      ▶ SUBSCRIBE
-    </a>
+  <!-- 1. 3D HERO SECTION (With Socials) -->
+  <div class="hero">
+    <div class="hero-card" id="card">
+      <h1>ZYPHABYSSX</h1>
+      <p>BATTLE ROYALE MASTER</p>
+      
+      <div class="social-grid">
+        <a class="social-btn btn-yt" href="https://www.youtube.com/@ZyphAbyssX" target="_blank">▶️ YouTube</a>
+        <a class="social-btn btn-fb" href="https://www.facebook.com/sontulimbu1998" target="_blank">📘 Facebook</a>
+        <a class="social-btn btn-wa" href="https://wa.me/918133049002" target="_blank">💬 WhatsApp</a>
+        <a class="social-btn btn-mail" href="mailto:sontulimbu1998@gmail.com">✉️ Email Me</a>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- BUNDLES -->
-<section>
-  <h2>🔥 Legendary Bundles</h2>
-  <div class="bundle-grid">
-    <div class="bundle">Golden Sakura Bundle</div>
-    <div class="bundle">Hip Hop Bundle</div>
-    <div class="bundle">Golden Season 1</div>
-    <div class="bundle">Golden Season 2</div>
-  </div>
-</section>
+  <!-- 2. GAMING ARENA -->
+  <section>
+    <h2 class="cyan-text">🎮 My Gaming Arena</h2>
+    <div class="grid">
+      <div class="arena-card">
+        <div class="logo">🔥</div>
+        <h3>Pro Gameplay</h3>
+        <p>Insane headshots, tactical rush gameplay, and elite battle royale strategies.</p>
+      </div>
+      <div class="arena-card">
+        <div class="logo">🎯</div>
+        <h3>BR Updates</h3>
+        <p>Daily updates on events, weapon skins, and tips to rank up to Grandmaster.</p>
+      </div>
+      <div class="arena-card">
+        <div class="logo">⚡</div>
+        <h3>Multi-Gaming</h3>
+        <p>Exploring new titles and showcasing high-octane action across various games.</p>
+      </div>
+      <div class="arena-card">
+        <div class="logo">🤝</div>
+        <h3>Collab / Chat</h3>
+        <p>Mere sath game khelne ya collab karne ke liye mujhe direct message karein!</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-© 2026 ZyphAbyssX • Free Fire 3D Gaming
-</footer>
+  <!-- 3. FEATURED LOADOUT (Golden Sakura Image) -->
+  <section>
+    <h2 class="gold-text">🏆 Featured Loadout</h2>
+    <div class="featured-card">
+      <h3>🔥 Golden Sakura Bundle</h3>
+      <!-- Make sure you have 'freefire.png' in an 'images' folder -->
+      <img src="images/freefire.png" alt="Free Fire Sakura Bundle" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/111122/ffcc00?text=Sakura+Bundle+Image';">
+    </div>
+  </section>
 
-<script>
-const card=document.getElementById("card");
-document.addEventListener("mousemove",e=>{
-  let x=(window.innerWidth/2-e.pageX)/25;
-  let y=(window.innerHeight/2-e.pageY)/25;
-  card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
-});
-document.addEventListener("mouseleave",()=>{
-  card.style.transform="rotateX(0) rotateY(0)";
-});
-</script>
+  <!-- 4. LEGENDARY BUNDLES LIST -->
+  <section>
+    <h2 class="neon-text">🎒 Collection Vault</h2>
+    <div class="grid">
+      <div class="bundle-card">🌸 Golden Sakura Bundle</div>
+      <div class="bundle-card">🎧 Hip Hop Bundle</div>
+      <div class="bundle-card">🥇 Golden Season 1</div>
+      <div class="bundle-card">👑 Golden Season 2</div>
+    </div>
+  </section>
+
+  <!-- 5. FOOTER -->
+  <footer>
+    © 2026 ZyphAbyssX • Free Fire E-Sports & Pro Gaming
+  </footer>
+
+  <script>
+    // 3D Tilt Effect
+    const card = document.getElementById("card");
+    
+    document.addEventListener("mousemove", (e) => {
+      // Enable 3D tilt on larger screens only to keep buttons clickable on mobile
+      if(window.innerWidth > 768) {
+        let x = (window.innerWidth / 2 - e.pageX) / 30;
+        let y = (window.innerHeight / 2 - e.pageY) / 30;
+        card.style.transform = rotateY(${x}deg) rotateX(${y}deg);
+      }
+    });
+    
+    document.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0) rotateY(0)";
+    });
+  </script>
 
 </body>
 </html>
+       
+                
+   
+
+
