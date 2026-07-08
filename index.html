@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+l        <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZyphAbyssX | The Ultimate E-Sports HQ</title>
+<title>ZyphAbyssX | The Ultimate Pro HQ</title>
 <style>
   :root {
     --neon: #ff0055;
     --cyan: #00f2fe;
     --gold: #ffcc00;
     --bg: #05050b;
-    --glass: rgba(255, 255, 255, 0.06);
+    --glass: rgba(255, 255, 255, 0.08);
   }
 
   body {
@@ -47,7 +47,7 @@
   .hero-card h1 {
     margin: 0;
     color: var(--neon);
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     text-shadow: 0 0 25px var(--neon);
     transform: translateZ(50px);
     text-transform: uppercase;
@@ -57,12 +57,13 @@
     letter-spacing: 2px;
     color: #ccc;
     transform: translateZ(40px);
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 1rem;
+    line-height: 1.6;
     font-weight: bold;
   }
 
-  /* --- SOCIAL BUTTONS IN HERO --- */
+  /* --- SOCIAL LINKS GRID --- */
   .social-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -136,9 +137,9 @@
   .arena-card h3 { color: #fff; margin-bottom: 10px; }
   .arena-card p { color: #bbb; font-size: 0.9rem; line-height: 1.5; }
 
-  /* --- FEATURED IMAGE CARD --- */
+  /* --- FEATURED 3D CARD --- */
   .featured-card {
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto;
     padding: 25px;
     background: var(--glass);
@@ -153,20 +154,6 @@
     transform: translateY(-10px) scale(1.02);
     border-color: var(--gold);
     box-shadow: 0 15px 40px rgba(255, 204, 0, 0.4);
-  }
-
-  .featured-card img {
-    width: 100%;
-    border-radius: 15px;
-    margin-top: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    border: 2px solid rgba(255,255,255,0.1);
-  }
-
-  .featured-card h3 {
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin: 0;
   }
 
   /* --- LEGENDARY BUNDLES GRID --- */
@@ -196,20 +183,24 @@
     color: #777;
     border-top: 1px solid rgba(255,255,255,0.05);
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 </style>
+
+<!-- 3D Model Viewer Script -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
 </head>
 <body>
 
-  <!-- 1. 3D HERO SECTION (With Socials) -->
+  <!-- 1. 3D HERO SECTION -->
   <div class="hero">
     <div class="hero-card" id="card">
       <h1>ZYPHABYSSX</h1>
-      <p>BATTLE ROYALE MASTER</p>
+      <p>BATTLE ROYALE MASTER<br>FREE FIRE PRO PLAYER</p>
       
       <div class="social-grid">
-        <a class="social-btn btn-yt" href="https://www.youtube.com/@ZyphAbyssX" target="_blank">▶️ YouTube</a>
+        <a class="social-btn btn-yt" href="https://youtube.com/@zyphabyssx" target="_blank">▶ YouTube</a>
         <a class="social-btn btn-fb" href="https://www.facebook.com/sontulimbu1998" target="_blank">📘 Facebook</a>
         <a class="social-btn btn-wa" href="https://wa.me/918133049002" target="_blank">💬 WhatsApp</a>
         <a class="social-btn btn-mail" href="mailto:sontulimbu1998@gmail.com">✉️ Email Me</a>
@@ -217,7 +208,7 @@
     </div>
   </div>
 
-  <!-- 2. GAMING ARENA -->
+  <!-- 2. GAMING ARENA SECTION -->
   <section>
     <h2 class="cyan-text">🎮 My Gaming Arena</h2>
     <div class="grid">
@@ -239,24 +230,58 @@
       <div class="arena-card">
         <div class="logo">🤝</div>
         <h3>Collab / Chat</h3>
-        <p>Mere sath game khelne ya collab karne ke liye mujhe direct message karein!</p>
+        <p>Mere sath game khelne ya collab karne ke liye mujhe kisi bhi platform par message karein!</p>
       </div>
     </div>
   </section>
 
-  <!-- 3. FEATURED LOADOUT (Golden Sakura Image) -->
+  <!-- 3. LATEST GAMEPLAY VIDEO SECTION -->
   <section>
-    <h2 class="gold-text">🏆 Featured Loadout</h2>
+    <h2 class="neon-text">🎬 Latest Gameplay</h2>
+    
+    <!-- Responsive Video Container -->
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 900px; margin: auto; border-radius: 20px; border: 2px solid var(--neon); box-shadow: 0 10px 40px rgba(255, 0, 85, 0.3);">
+      
+      <!-- Tumhare video ki correct ID ke sath Iframe -->
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+              src="https://www.youtube.com/embed/_J_7_1UYevU" 
+              title="ZyphAbyssX Free Fire Pro Gameplay" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+
+    </div>
+
+    <br>
+    <!-- Tumhare Channel ka Direct Link -->
+    <a href="https://www.youtube.com/@ZyphAbyssX" target="_blank" class="social-btn" style="display: inline-block; background: #ff0000; color: white; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; border: none; box-shadow: 0 0 20px #ff0000; margin-top: 20px; font-weight: bold; text-decoration: none;">
+      ▶ SUBSCRIBE TO ZYPHABYSSX
+    </a>
+  </section>
+
+  <!-- 4. TRUE 3D AVATAR SECTION -->
+  <section>
+    <h2 class="gold-text">🏆 My 3D Avatar</h2>
     <div class="featured-card">
-      <h3>🔥 Golden Sakura Bundle</h3>
-      <!-- Make sure you have 'freefire.png' in an 'images' folder -->
-      <img src="images/freefire.png" alt="Free Fire Sakura Bundle" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/111122/ffcc00?text=Sakura+Bundle+Image';">
+      <!-- Yahan 3D Model aayega (.glb file upload hone ke baad src change kar lena) -->
+      <model-viewer 
+        src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" 
+        alt="3D Pro Character" 
+        auto-rotate 
+        camera-controls 
+        shadow-intensity="2" 
+        style="width: 100%; height: 350px; outline: none; background: transparent;">
+      </model-viewer>
+
+      <h3 style="margin-top: 10px; color: var(--gold);">🔥 Pro 3D Character</h3>
+      <p style="color: #bbb; font-size: 0.85rem; margin-top: 5px;">(Mouse ya finger se character ko ghuma ke dekho!)</p>
     </div>
   </section>
 
-  <!-- 4. LEGENDARY BUNDLES LIST -->
+  <!-- 5. LEGENDARY BUNDLES SECTION -->
   <section>
-    <h2 class="neon-text">🎒 Collection Vault</h2>
+    <h2 class="cyan-text">🔥 Legendary Bundles</h2>
     <div class="grid">
       <div class="bundle-card">🌸 Golden Sakura Bundle</div>
       <div class="bundle-card">🎧 Hip Hop Bundle</div>
@@ -265,21 +290,21 @@
     </div>
   </section>
 
-  <!-- 5. FOOTER -->
+  <!-- 6. FOOTER -->
   <footer>
-    © 2026 ZyphAbyssX • Free Fire E-Sports & Pro Gaming
+    © 2026 ZyphAbyssX • Free Fire 3D Gaming & E-Sports
   </footer>
 
   <script>
-    // 3D Tilt Effect
+    // 3D Tilt Effect Script
     const card = document.getElementById("card");
     
     document.addEventListener("mousemove", (e) => {
-      // Enable 3D tilt on larger screens only to keep buttons clickable on mobile
+      // Mobile pe click easy rakhne ke liye 3D sirf badi screen pe chalega
       if(window.innerWidth > 768) {
         let x = (window.innerWidth / 2 - e.pageX) / 30;
         let y = (window.innerHeight / 2 - e.pageY) / 30;
-        card.style.transform = rotateY(${x}deg) rotateX(${y}deg);
+        card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
       }
     });
     
@@ -290,8 +315,4 @@
 
 </body>
 </html>
-       
-                
-   
-
 
