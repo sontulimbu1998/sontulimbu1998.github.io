@@ -1,317 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZyphAbyssX | The Ultimate Pro HQ</title>
-<style>
-  :root {
-    --neon: #ff0055;
-    --cyan: #00f2fe;
-    --gold: #ffcc00;
-    --bg: #05050b;
-    --glass: rgba(255, 255, 255, 0.08);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZyphAbyssX | Multi-Gaming Channel</title>
+    <!-- Google Fonts for Gaming Vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --secondary: #ff007f;
+            --bg-color: #0b0c10;
+            --surface: rgba(31, 40, 51, 0.85);
+            --text: #c5c6c7;
+        }
 
-  body {
-    margin: 0;
-    background: radial-gradient(circle at top, #1a1a2e, var(--bg));
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden;
-  }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  /* --- 3D HERO SECTION --- */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    perspective: 1200px;
-    padding: 40px 20px;
-  }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text);
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            /* FULL BACKGROUND PHOTO */
+            background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95)), 
+                        url('https://kommodo.ai/i/C0PWjYwxD3DeFuDMPbqo') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-  .hero-card {
-    width: 100%;
-    max-width: 450px;
-    padding: 50px 30px;
-    background: linear-gradient(145deg, #111122, #06060c);
-    border-radius: 25px;
-    border: 2px solid var(--neon);
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
-  }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
 
-  .hero-card h1 {
-    margin: 0;
-    color: var(--neon);
-    font-size: 3.2rem;
-    text-shadow: 0 0 25px var(--neon);
-    transform: translateZ(50px);
-    text-transform: uppercase;
-  }
+        /* 3D LETTER EFFECT FOR TITLE */
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 
+                0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,0.1),
+                0 0 10px rgba(0, 255, 204, 0.8),
+                0 0 20px rgba(0, 255, 204, 0.8),
+                0 1px 3px rgba(0,0,0,0.3),
+                0 3px 5px rgba(0,0,0,0.2),
+                0 5px 10px rgba(0,0,0,0.25),
+                0 10px 10px rgba(0,0,0,0.2),
+                0 20px 20px rgba(0,0,0,0.15),
+                0 0 40px var(--primary);
+            animation: float3d 3s ease-in-out infinite alternate;
+        }
 
-  .hero-card p {
-    letter-spacing: 2px;
-    color: #ccc;
-    transform: translateZ(40px);
-    margin-top: 15px;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: bold;
-  }
+        @keyframes float3d {
+            0% { transform: translateY(0px) rotateX(0deg); }
+            100% { transform: translateY(-10px) rotateX(5deg); }
+        }
 
-  /* --- SOCIAL LINKS GRID --- */
-  .social-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 35px;
-    transform: translateZ(60px);
-  }
+        /* Glowing Text Effect */
+        .neon-text {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--primary), 0 0 40px var(--primary);
+        }
 
-  .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    background: var(--glass);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
-    font-size: 0.9rem;
-  }
+        .neon-text-alt {
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px var(--secondary), 0 0 20px var(--secondary), 0 0 40px var(--secondary);
+        }
 
-  .social-btn:hover { transform: translateY(-3px); }
-  .btn-yt:hover { background: #ff0000; box-shadow: 0 0 20px #ff0000; border-color: #ff0000; }
-  .btn-fb:hover { background: #1877f2; box-shadow: 0 0 20px #1877f2; border-color: #1877f2; }
-  .btn-wa:hover { background: #25d366; box-shadow: 0 0 20px #25d366; border-color: #25d366; }
-  .btn-mail:hover { background: var(--cyan); color: #000; box-shadow: 0 0 20px var(--cyan); border-color: var(--cyan); }
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
 
-  /* --- GENERAL SECTIONS --- */
-  section {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1100px;
-    margin: auto;
-  }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
 
-  h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-  }
+        /* 3D Button */
+        .btn-subscribe {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, var(--secondary), #ff4d4d);
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(255, 0, 127, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            transform-style: preserve-3d;
+        }
 
-  h2.neon-text { color: var(--neon); text-shadow: 0 0 15px var(--neon); }
-  h2.gold-text { color: var(--gold); text-shadow: 0 0 15px var(--gold); }
-  h2.cyan-text { color: var(--cyan); text-shadow: 0 0 15px var(--cyan); }
+        .btn-subscribe:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(255, 0, 127, 0.6);
+        }
 
-  /* --- GAMING ARENA GRID --- */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-  }
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-  .arena-card {
-    background: var(--glass);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 30px 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
-  }
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
 
-  .arena-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--neon);
-    box-shadow: 0 10px 30px rgba(255,0,85,0.3);
-  }
+        /* About / Freefire Card */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-  .arena-card .logo { font-size: 3rem; margin-bottom: 15px; }
-  .arena-card h3 { color: #fff; margin-bottom: 10px; }
-  .arena-card p { color: #bbb; font-size: 0.9rem; line-height: 1.5; }
+        .tilt-card {
+            background: var(--surface);
+            border: 1px solid var(--primary);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
 
-  /* --- FEATURED 3D CARD --- */
-  .featured-card {
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 25px;
-    background: var(--glass);
-    border-radius: 20px;
-    border: 1px solid rgba(255,204,0,0.3);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 40px rgba(255, 204, 0, 0.1);
-    transition: 0.4s;
-  }
+        .tilt-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            transform: translateZ(50px);
+        }
 
-  .featured-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--gold);
-    box-shadow: 0 15px 40px rgba(255, 204, 0, 0.4);
-  }
+        .tilt-card p, .tilt-card ul {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            transform: translateZ(30px);
+        }
 
-  /* --- LEGENDARY BUNDLES GRID --- */
-  .bundle-card {
-    background: var(--glass);
-    border-radius: 20px;
-    padding: 25px;
-    border: 1px solid rgba(255,255,255,.15);
-    transition: 0.3s;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #eee;
-  }
+        .tilt-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
 
-  .bundle-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    border-color: var(--gold);
-    box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
-    color: var(--gold);
-  }
+        .tilt-card ul li {
+            margin-bottom: 10px;
+        }
 
-  /* --- FOOTER --- */
-  footer {
-    padding: 25px;
-    text-align: center;
-    background: #030308;
-    color: #777;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    font-size: 14px;
-    margin-top: 20px;
-  }
-</style>
+        .tilt-card ul li i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
 
-<!-- 3D Model Viewer Script -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        /* FREEFIRE PROFILE PHOTO */
+        .ff-profile-box {
+            width: 100%;
+            height: 240px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+            transform: translateZ(40px);
+        }
 
+        .ff-profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* FreeFire Badge */
+        .ff-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff9900, #ff0000);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: white;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            transform: translateZ(40px);
+        }
+
+        /* Videos Section */
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            justify-items: center;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--secondary);
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+            transition: transform 0.4s ease;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(255, 0, 127, 0.6);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #fff;
+            background: var(--surface);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .btn-subscribe { padding: 12px 25px; font-size: 1.2rem; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- 1. 3D HERO SECTION -->
-  <div class="hero">
-    <div class="hero-card" id="card">
-      <h1>ZYPHABYSSX</h1>
-      <p>BATTLE ROYALE MASTER<br>FREE FIRE PRO PLAYER</p>
-      
-      <div class="social-grid">
-        <a class="social-btn btn-yt" href="https://youtube.com/@zyphabyssx" target="_blank">▶ YouTube</a>
-        <a class="social-btn btn-fb" href="https://www.facebook.com/sontulimbu1998" target="_blank">📘 Facebook</a>
-        <a class="social-btn btn-wa" href="https://wa.me/918133049002" target="_blank">💬 WhatsApp</a>
-        <a class="social-btn btn-mail" href="mailto:sontulimbu1998@gmail.com">✉️ Email Me</a>
-      </div>
-    </div>
-  </div>
+    <!-- Hero Section -->
+    <header>
+        <h1 class="hero-title">ZyphAbyssX</h1>
+        <p class="hero-subtitle">Exploring New Games • Improving Skills • Gaming Without Limits</p>
+        <a href="https://www.youtube.com/@ZyphAbyssX" target="_blank" class="btn-subscribe">
+            <i class="fa-brands fa-youtube"></i> SUBSCRIBE NOW
+        </a>
+    </header>
 
-  <!-- 2. GAMING ARENA SECTION -->
-  <section>
-    <h2 class="cyan-text">🎮 My Gaming Arena</h2>
-    <div class="grid">
-      <div class="arena-card">
-        <div class="logo">🔥</div>
-        <h3>Pro Gameplay</h3>
-        <p>Insane headshots, tactical rush gameplay, and elite battle royale strategies.</p>
-      </div>
-      <div class="arena-card">
-        <div class="logo">🎯</div>
-        <h3>BR Updates</h3>
-        <p>Daily updates on events, weapon skins, and tips to rank up to Grandmaster.</p>
-      </div>
-      <div class="arena-card">
-        <div class="logo">⚡</div>
-        <h3>Multi-Gaming</h3>
-        <p>Exploring new titles and showcasing high-octane action across various games.</p>
-      </div>
-      <div class="arena-card">
-        <div class="logo">🤝</div>
-        <h3>Collab / Chat</h3>
-        <p>Mere sath game khelne ya collab karne ke liye mujhe kisi bhi platform par message karein!</p>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title neon-text-alt">About The Channel</h2>
+        <div class="about-grid">
+            <div class="tilt-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <h3>Welcome to the Abyss</h3>
+                <p>Your one-stop destination for multi-gaming content. From high-octane action and deep RPG adventures to fiercely competitive matches, you'll find it all right here.</p>
+                <ul>
+                    <li><i class="fa-solid fa-gamepad"></i> Clean Gameplay</li>
+                    <li><i class="fa-solid fa-arrow-trend-up"></i> Real Progress</li>
+                    <li><i class="fa-solid fa-star"></i> Honest Gaming Experience</li>
+                </ul>
+            </div>
+            
+            <div class="tilt-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                
+                <!-- PHOTO LINK YAHAN CHANGE KAREIN -->
+                <div class="ff-profile-box">
+                    <img src="https://kommodo.ai/i/JJBWTzX0O73JhYZl4HBD" alt="ZyphAbyssX FreeFire Profile">
+                </div>
+                <!-- UPAR WALE 'src' MEIN APNA NAYA LINK DAAL SAKTE HAIN -->
 
-  <!-- 3. LATEST GAMEPLAY VIDEO SECTION -->
-  <section>
-    <h2 class="neon-text">🎬 Latest Gameplay</h2>
-    
-    <!-- Responsive Video Container -->
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 900px; margin: auto; border-radius: 20px; border: 2px solid var(--neon); box-shadow: 0 10px 40px rgba(255, 0, 85, 0.3);">
-      
-      <!-- Tumhare video ki correct ID ke sath Iframe -->
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-              src="https://www.youtube.com/embed/_J_7_1UYevU" 
-              title="ZyphAbyssX Free Fire Pro Gameplay" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-      </iframe>
+                <h3>FreeFire Profile</h3>
+                <p>Join me in the battlegrounds! Watch high-level competitive gameplay and strategic mastery.</p>
+                <div class="ff-badge">
+                    <i class="fa-solid fa-fire"></i> IGN: ZyphAbyssX
+                </div>
+                <ul style="margin-top: 1.5rem;">
+                    <li><i class="fa-solid fa-angles-up"></i> <strong>Level:</strong> 79</li>
+                    <li><i class="fa-solid fa-id-card"></i> <strong>UID:</strong> 1043503450</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Live & Latest Videos Section -->
+    <section id="videos">
+        <h2 class="section-title neon-text">Latest Gameplay</h2>
+        <div class="video-container">
+            <!-- Video 1 -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/_J_7_1UYevU" title="ZyphAbyssX Gameplay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <!-- Video 2 (Short) -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/RsMHLZ1soVY" title="ZyphAbyssX Short" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 
-    <br>
-    <!-- Tumhare Channel ka Direct Link -->
-    <a href="https://www.youtube.com/@ZyphAbyssX" target="_blank" class="social-btn" style="display: inline-block; background: #ff0000; color: white; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; border: none; box-shadow: 0 0 20px #ff0000; margin-top: 20px; font-weight: bold; text-decoration: none;">
-      ▶ SUBSCRIBE TO ZYPHABYSSX
-    </a>
-  </section>
+    <!-- Contact & Socials -->
+    <section id="contact">
+        <h2 class="section-title neon-text-alt">Connect With Me</h2>
+        <div class="contact-links">
+            <a href="https://wa.me/918133049002" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i> WhatsApp
+            </a>
+            <a href="mailto:sontulimbu1998@gmail.com" class="contact-btn">
+                <i class="fa-solid fa-envelope" style="color: #EA4335; font-size: 1.5rem;"></i> Email
+            </a>
+            <a href="https://facebook.com/sontulimbu1998.in" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-facebook" style="color: #1877F2; font-size: 1.5rem;"></i> Facebook
+            </a>
+            <a href="https://www.youtube.com/@ZyphAbyssX" target="_blank" class="contact-btn">
+                <i class="fa-brands fa-youtube" style="color: #FF0000; font-size: 1.5rem;"></i> YouTube
+            </a>
+        </div>
+    </section>
 
-  <!-- 4. TRUE 3D AVATAR SECTION -->
-  <section>
-    <h2 class="gold-text">🏆 My 3D Avatar</h2>
-    <div class="featured-card">
-      <!-- Yahan 3D Model aayega (.glb file upload hone ke baad src change kar lena) -->
-      <model-viewer 
-        src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" 
-        alt="3D Pro Character" 
-        auto-rotate 
-        camera-controls 
-        shadow-intensity="2" 
-        style="width: 100%; height: 350px; outline: none; background: transparent;">
-      </model-viewer>
+    <footer>
+        <p>&copy; 2026 ZyphAbyssX. All Rights Reserved.</p>
+    </footer>
 
-      <h3 style="margin-top: 10px; color: var(--gold);">🔥 Pro 3D Character</h3>
-      <p style="color: #bbb; font-size: 0.85rem; margin-top: 5px;">(Mouse ya finger se character ko ghuma ke dekho!)</p>
-    </div>
-  </section>
-
-  <!-- 5. LEGENDARY BUNDLES SECTION -->
-  <section>
-    <h2 class="cyan-text">🔥 Legendary Bundles</h2>
-    <div class="grid">
-      <div class="bundle-card">🌸 Golden Sakura Bundle</div>
-      <div class="bundle-card">🎧 Hip Hop Bundle</div>
-      <div class="bundle-card">🥇 Golden Season 1</div>
-      <div class="bundle-card">👑 Golden Season 2</div>
-    </div>
-  </section>
-
-  <!-- 6. FOOTER -->
-  <footer>
-    © 2026 ZyphAbyssX • Free Fire 3D Gaming & E-Sports
-  </footer>
-
-  <script>
-    // 3D Tilt Effect Script
-    const card = document.getElementById("card");
-    
-    document.addEventListener("mousemove", (e) => {
-      // Mobile pe click easy rakhne ke liye 3D sirf badi screen pe chalega
-      if(window.innerWidth > 768) {
-        let x = (window.innerWidth / 2 - e.pageX) / 30;
-        let y = (window.innerHeight / 2 - e.pageY) / 30;
-        card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-      }
-    });
-    
-    document.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0) rotateY(0)";
-    });
-  </script>
-
+    <!-- Vanilla Tilt JS for 3D Hover Effects -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script>
+        // Initialize 3D tilt effect
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+    </script>
 </body>
 </html>
